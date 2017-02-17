@@ -44,7 +44,7 @@ class SimpleSqlAction extends BaseAction{
 				$null_str=$val['null'] ? 'NOT NULL' : '';
 				//进行语句的拼接
 				$col="`%s` %s %s %s COMMENT '%s',";
-				$col=sprintf($col,$val['name'],$type,$null_str,$val['default'],$val['comment']);
+				$col=sprintf($col,trim($val['name']),$type,$null_str,trim($val['default']),trim($val['comment']));
 				$column.=$col."\n";
 			}
 			$column=substr($column, 0,-1);
