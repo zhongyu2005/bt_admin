@@ -51,8 +51,8 @@ class SimpleSqlAction extends BaseAction{
 			$str="CREATE TABLE `table_name` (
 `id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT 'pk',
 {$column}
-`create_at` int(10) NOT NULL DEFAULT '0',
-`update_at` int(10) NOT NULL DEFAULT '0',
+`create_at` bigint(20) NOT NULL DEFAULT '0',
+`update_at` bigint(20) NOT NULL DEFAULT '0',
 `deleted` tinyint(1) NOT NULL DEFAULT '0' COMMENT '0正常1删除',
 PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT '' ";
@@ -104,6 +104,10 @@ PRIMARY KEY (`id`)
 			$this->assign("list_tpl",$list_tpl);
 			$this->assign("showType",'tpl');
 		}
+		$this->display();
+	}
+	
+	public function tools(){
 		$this->display();
 	}
 

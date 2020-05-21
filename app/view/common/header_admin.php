@@ -56,7 +56,8 @@
               'id'=>-10,'name'=>'SimpleSql','action'=>'SimpleSql','method'=>'index','parent'=>0,
               'sub'=>array(
                 '-12'=>array('id'=>-12,'name'=>'快速建库','action'=>'SimpleSql','method'=>'index','parent'=>-10),
-                '-13'=>array('id'=>-12,'name'=>'快速生成','action'=>'SimpleSql','method'=>'create','parent'=>-10),
+                '-13'=>array('id'=>-13,'name'=>'快速生成','action'=>'SimpleSql','method'=>'create','parent'=>-13),
+                '-14'=>array('id'=>-14,'name'=>'简单工具','action'=>'SimpleSql','method'=>'tools','parent'=>-14),
               )
             ),
           );

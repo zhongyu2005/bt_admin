@@ -10,7 +10,7 @@ $config=array(
 				'DB_HOST'=>'127.0.0.1',
 				'DB_NAME'=>'test',
 				'DB_USER'=>'root',
-				'DB_PWD'=>'',
+				'DB_PWD'=>'root2016zhong',
 		),
 		'LOG_PATH'=>$_log,
 		//cache

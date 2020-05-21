@@ -84,9 +84,13 @@
   function html_load () {
     $("#btnAdd").on("click",function(){
         var html=$("#tpl-sql1").html();
-        html=html.replace(/table\[n\]/g,"table["+def.num+"]");
-        def.num++;
-        $("#sql-tab").append(html);
+        //html=html.replace(/table\[n\]/g,"table["+def.num+"]");
+	var len=5;
+	while(len>=0){
+		def.num++;
+		$("#sql-tab").append(html.replace(/table\[n\]/g,"table["+def.num+"]"));
+		len--;
+	}
     }).trigger('click');
     $("#btnCreate").on("click",function(){
         var url=def.self;
