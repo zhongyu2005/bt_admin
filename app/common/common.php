@@ -41,7 +41,7 @@ function dom_help($url){
  * 生成url
  */
 function url($action,$method,$args=null){
-	$url='http://'.$_SERVER['SERVER_NAME'].':'.$_SERVER['SERVER_PORT'].$_SERVER['SCRIPT_NAME'];
+	$url=$_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['HTTP_HOST'].$_SERVER['SCRIPT_NAME'];
 	$action[0]=strtoupper($action[0]);
 	$url.='?a='.$action.'&m='.$method;
 	if(!empty($args)){
